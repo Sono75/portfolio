@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FiDownload, FiMail } from 'react-icons/fi'
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa'
 import './Hero.css'
+import profileimage from '/myimage.jpeg'
 
 const roles = [
   'Computer Science Student',
@@ -137,9 +138,9 @@ const Hero = () => {
             <div className="image-bg"></div>
             <div className="profile-image">
               <img 
-                src="[images.unsplash.com](https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face)" 
+                src={profileimage} 
                 alt="Dikshaya - Profile Photo"
-              />
+             style={{ objectFit: 'contain', height: '150%' }}/>
             </div>
             <div className="image-ring"></div>
             <div className="image-dots"></div>
