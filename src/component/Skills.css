@@ -1,0 +1,141 @@
+.skills {
+  background: var(--white);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.category-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient-red);
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.skill-card {
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: transform var(--transition-normal);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+.skill-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--light-gray);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray);
+  min-width: 40px;
+}
+
+.soft-skills-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.soft-skill-card {
+  padding: 35px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.soft-skill-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 57, 53, 0.1);
+  color: var(--primary-red);
+  font-size: 1.8rem;
+  border-radius: var(--border-radius-full);
+  transition: all var(--transition-normal);
+}
+
+.soft-skill-card:hover .soft-skill-icon {
+  background: var(--gradient-red);
+  color: var(--white);
+  transform: rotate(360deg);
+}
+
+.soft-skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+}
+
+.soft-skill-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .skills-grid,
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-grid,
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

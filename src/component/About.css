@@ -1,0 +1,146 @@
+.about {
+  background: var(--white);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-image-container {
+  position: relative;
+}
+
+.about-image {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(229, 57, 53, 0.2) 0%, transparent 100%);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  padding: 25px 35px;
+  text-align: center;
+  background: var(--white);
+}
+
+.exp-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-top: 5px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 25px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  color: var(--primary-red);
+  margin-bottom: 15px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.about-description {
+  margin-bottom: 30px;
+}
+
+.about-description p {
+  color: var(--gray);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.about-description strong {
+  color: var(--dark-gray);
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .about-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .experience-badge {
+    bottom: -20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .stat-icon {
+    margin-bottom: 0;
+  }
+  
+  .about-image img {
+    height: 350px;
+  }
+}

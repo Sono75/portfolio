@@ -1,0 +1,32 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-full);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 999;
+  transition: box-shadow var(--transition-normal);
+}
+
+.scroll-to-top:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 576px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
