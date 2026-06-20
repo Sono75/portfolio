@@ -5,7 +5,7 @@ import Hero from './component/Hero'
 import About from './component/About'
 import Education from './component/Education'
 import Skills from './component/Skills'
-import Certifications from './component/Certifications'
+import MyCertifications from './component/MyCertifications'
 import Contact from './component/Contact'
 import Footer from './component/Footer'
 import ScrollToTop from './component/ScrollToTop'
@@ -31,7 +31,7 @@ function App() {
             <About />
             <Education />
             <Skills />
-            <Certifications />
+            <MyCertifications />
             <Contact />
           </main>
           <Footer />

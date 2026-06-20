@@ -14,7 +14,7 @@ const certifications = [
   },
 ]
 
-const Certifications = () => {
+const MyCertifications = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -86,4 +86,4 @@ const Certifications = () => {
   )
 }
 
-export default Certifications
+export default MyCertifications
